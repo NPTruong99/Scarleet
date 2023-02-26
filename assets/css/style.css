@@ -33,6 +33,7 @@ body.dark-theme {
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -411,6 +412,41 @@ img {
     transform: rotate(-180deg);
 }
 /* ============================== QUALIFICATION ============================== */
+.qualification__container {
+    display: flex;
+    gap: 50px;
+}
+
+.qualification__content {
+    width: calc(50% - 50px);
+    /* text-align: center; */
+}
+
+.qualification__title-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+.qualification__title {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--title-color);
+}
+
+.qualification__area {
+    margin-top: 32px;
+    font-size: 2rem;
+    color: var(--title-color);
+}
+
+.qualification__box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    border-bottom: 1px solid var(--text-color);
+}
+
 /* ============================== SERVICES ============================== */
 /* ============================== PROJECT IN MIND ============================== */
 /* ============================== PORTFOLIO ============================== */
