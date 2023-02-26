@@ -1,5 +1,4 @@
 :root {
-    /* =============== Common =============== */
     --hue-color: 250;
 
     --primary-color: hsl(var(--hue-color), 69%, 61%);
@@ -9,9 +8,14 @@
     --title-color: hsl(var(--hue-color), 8%, 15%);
     --text-color: hsl(var(--hue-color), 8%, 45%);
     --text-color-light: hsl(var(--hue-color), 8%, 65%);
-    --primary-color: hsl(var(--hue-color), 70%, 96%);
-    --primary-color: hsl(var(--hue-color), 60%, 99%);
+    --input-color: hsl(var(--hue-color), 70%, 96%);
+    --body-color: hsl(var(--hue-color), 60%, 99%);
     --container-color: #fff;
+
+    /* ========== font size ========== */
+    --h1-font-size: 5.8rem;
+    --h2-font-size: 3.8rem;
+    --h3-font-size: 1.8rem;
 }
 
 body.dark-theme {
@@ -38,11 +42,51 @@ body {
 }
 
 /* ============================== Common ============================== */
-.section {
+.container {
     width: 1170px;
     margin-left: auto;
     margin-right: auto;
     max-width: calc(100% - 48px);
+}
+
+.section {
+    padding: 96px 0 32px;
+    background: var(--body-color);
+}
+
+.section__heading {
+    color: var(--title-color);
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-size: var(--h1-font-size);
+}
+
+.section__subheading {
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 2.4rem;
+}
+
+.section__title {
+    text-align: center;
+    color: var(--title-color);
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: var(--h2-font-size);
+}
+
+.section__subtitle,
+.section__desc {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 30px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.section__subtitle {
+    display: block;
+    text-align: center;
 }
 
 a {
@@ -56,6 +100,7 @@ a {
     padding: 16px;
     border-radius: 999px;
     font-weight: 500;
+    font-size: 2rem;
 }
 
 .btn:hover {
@@ -97,7 +142,16 @@ a {
     background: #fff;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* ============================== HEADER ============================== */
+.header {
+    background: var(--body-color);
+}
+
 .header.fixed {
     position: sticky;
     top: -28px;
@@ -144,26 +198,218 @@ a {
     transition: all 0.1s ease;
 }
 
-.active {
-    color: blue;
-}
-
 .change-theme {
     font-size: 2rem;
 }
 
 .scroll-header {
-    background: #000;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
-.scroll-header .nav__logo,
+/* .scroll-header .nav__logo,
 .scroll-header .nav__link,
 .scroll-header .change-theme {
     color: #fff;
-}
+} */
 
 /* ============================== HOME ============================== */
+.home__container {
+    display: flex;
+    gap: 125px;
+}
+
+.home__data {
+    width: 50%;
+    padding: 50px 32px;
+}
+
+.home__social {
+    margin-top: 20px;
+}
+
+.home__social-icon {
+    font-size: 3.5rem;
+}
+
+.home__social-icon + .home__social-icon {
+    margin-left: 12px;
+}
+
+.home__img {
+    width: 500px;
+    fill: var(--primary-color);
+}
+
+.home__blob-image {
+    width: 180px;
+}
+
+/* ============================== ABOUT ============================== */
+.about__container {
+    display: flex;
+}
+
+.about__img {
+    width: 48%;
+}
+
+.about__image {
+    /* display: block;
+    margin: auto; */
+    margin-left: 30px;
+    width: 450px;
+    border-radius: 8px;
+}
+
+.about__data {
+    width: 52%;
+    margin: 12px 30px;
+}
+
+.about__info {
+    display: flex;
+    margin-bottom: 32px;
+    justify-content: space-between;
+}
+
+.about__info-title {
+    display: block;
+    font-size: 2.4rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--title-color);
+}
+
+.about__info-name {
+    display: block;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.about__buttons {
+    display: flex;
+    align-items: center;
+}
+
 /* ============================== SKILLS ============================== */
+.skills .section__subtitle {
+    margin-bottom: 50px;
+}
+
+.skills__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.skills__content {
+    width: calc(50% - 40px);
+}
+
+.skills__head {
+    display: flex;
+}
+
+.skills__icon {
+    margin-right: 12px;
+    font-size: 3.5rem;
+    color: var(--primary-color);
+}
+
+.skills__title {
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin-bottom: 6px;
+    color: var(--title-color);
+}
+
+.skills__arrow {
+    font-size: 3.5rem;
+    margin-left: auto;
+    color: var(--primary-color);
+}
+
+.skills__list {
+    margin-top: 30px;
+    margin-left: 47px;
+}
+
+.skills__titles {
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills__bar {
+    height: 5px;
+    border-radius: 999px;
+    background: var(--primary-color-lighter);
+}
+
+.skills__percentage {
+    display: block;
+    background: var(--primary-color);
+    height: 5px;
+    border-radius: 999px;
+}
+
+.skills__html {
+    width: 90%;
+}
+
+.skills__css {
+    width: 80%;
+}
+
+.skills__js {
+    width: 60%;
+}
+
+.skills__react {
+    width: 85%;
+}
+
+.skills__php {
+    width: 90%;
+}
+
+.skills__node {
+    width: 70%;
+}
+
+.skills__firebase {
+    width: 90%;
+}
+
+.skills__python {
+    width: 55%;
+}
+
+.skills__figma {
+    width: 90%;
+}
+
+.skills__sketch {
+    width: 85%;
+}
+
+.skills__photo {
+    width: 90%;
+}
+
+.skills__data + .skills__data {
+    margin-top: 15px;
+}
+
+.skills-close .skills__list {
+    height: 0;
+    overflow: hidden;
+}
+
+.skills-open .skills__arrow {
+    transform: rotate(-180deg);
+}
 /* ============================== QUALIFICATION ============================== */
 /* ============================== SERVICES ============================== */
 /* ============================== PROJECT IN MIND ============================== */
