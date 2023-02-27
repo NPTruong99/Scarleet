@@ -106,7 +106,7 @@ a {
     padding: 16px;
     border-radius: 999px;
     font-weight: 500;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .btn:hover {
@@ -609,6 +609,36 @@ img {
 }
 
 /* ============================== PROJECT IN MIND ============================== */
+.project__bg {
+    padding-top: 48px;
+    background: var(--primary-color);
+}
+
+.project__container {
+    display: flex;
+}
+
+.project__data {
+    width: 52%;
+}
+
+.project__title {
+    color: #fff;
+    font-size: 3.8rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.project__subtitle {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.project__image {
+    display: block;
+    width: 350px;
+}
+
 /* ============================== TESTIMONIAL ============================== */
 /* ============================== CONTACT ============================== */
-/* ============================== FOOTER ============================== */
+/* ============================== FOOTER ============================== */ ;
