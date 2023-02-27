@@ -90,6 +90,11 @@ body {
     text-align: center;
 }
 
+.grid {
+    display: grid;
+    gap: 24px;
+}
+
 a {
     text-decoration: none;
 }
@@ -111,7 +116,7 @@ a {
 .btn__icon {
     font-size: 2rem;
     margin-left: 8px;
-    transform: 0.3s;
+    transform: 0.4s;
 }
 
 .btn--flex {
@@ -120,7 +125,6 @@ a {
 }
 
 .btn--small {
-    padding: 12px 16px;
 }
 
 .btn--link {
@@ -288,7 +292,7 @@ img {
     text-align: center;
 }
 
-.about__buttons {
+.about__btns {
     display: flex;
     align-items: center;
 }
@@ -448,8 +452,163 @@ img {
 }
 
 /* ============================== SERVICES ============================== */
-/* ============================== PROJECT IN MIND ============================== */
+.services__container {
+    gap: 2.4rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.services__content {
+    position: relative;
+    background: var(--container-color);
+    padding: 56px 8px 56px 24px;
+    border-radius: 0.4rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+
+.services__content:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.services__icon {
+    display: block;
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 16px;
+}
+
+.services__title {
+    font-weight: 500;
+    margin-bottom: 16px;
+    font-size: 2rem;
+    color: var(--title-color);
+}
+
+.services__btn {
+    cursor: pointer;
+    font-size: var(--small-font-size);
+}
+
+.portfolio__btn:hover .btn__icon,
+.services__btn:hover .btn__icon {
+    transform: translateX(0.4rem);
+}
+
+.services__modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.6rem;
+    z-index: 3;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.services__modal-content {
+    position: relative;
+    background: var(--container-color);
+    padding: 2.4rem;
+    border-radius: 0.8rem;
+}
+
+.services__modal-title {
+    font-size: 2rem;
+    color: var(--title-color);
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.services__modal-service {
+    display: flex;
+}
+
+.services__modal-close {
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+    font-size: 2.4rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.services__modal-icon {
+    color: var(--primary-color);
+    margin-right: 4px;
+}
+
+/* ==================== Active modal ==================== */
+.active-modal {
+    opacity: 1;
+    visibility: visible;
+}
+
 /* ============================== PORTFOLIO ============================== */
+.portfolio__container {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.portfolio__nav {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 32px;
+}
+
+.portfolio__item {
+    padding: 0 24px;
+    cursor: pointer;
+    color: var(--title-color);
+    font-weight: 600;
+}
+
+.portfolio__content {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio__content:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.portfolio__content:hover .portfolio__img {
+    transform: scale(1.03);
+}
+
+.portfolio__img {
+    width: 100%;
+    transition: 0.4s;
+}
+
+.portfolio__data {
+    padding: 24px;
+}
+
+.portfolio__subtitle {
+    font-size: 1.4rem;
+    color: var(--text-color-light);
+}
+
+.portfolio__title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    color: var(--title-color);
+}
+
+.active-portfolio {
+    color: var(--primary-color);
+}
+
+/* ============================== PROJECT IN MIND ============================== */
 /* ============================== TESTIMONIAL ============================== */
 /* ============================== CONTACT ============================== */
 /* ============================== FOOTER ============================== */

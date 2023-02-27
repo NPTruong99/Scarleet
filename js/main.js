@@ -44,3 +44,51 @@ function toggleSkills() {
 skillsHeader.forEach((e) => {
     e.addEventListener("click", toggleSkills);
 });
+
+/* ==================== SERVICES MODAL ==================== */
+const modalViews = document.querySelectorAll(".services__modal"),
+    modalBtns = document.querySelectorAll(".services__btn"),
+    modalCloses = document.querySelectorAll(".services__modal-close");
+
+let modal = function (modalClick) {
+    modalViews[modalClick].classList.add("active-modal");
+};
+
+modalBtns.forEach((modalBtn, i) => {
+    modalBtn.addEventListener("click", () => {
+        modal(i);
+    });
+});
+
+modalCloses.forEach((modalClose) => {
+    modalClose.addEventListener("click", () => {
+        modalViews.forEach((modalView) => {
+            modalView.classList.remove("active-modal");
+        });
+    });
+});
+
+/* ==================== MIXITUP FILTER ==================== */
+const mixer = mixitup(".portfolio__container", {
+    selectors: {
+        target: ".portfolio__content",
+    },
+    animation: {
+        duration: 300,
+    },
+});
+/* ==================== ACTIVE MIXITUP WHEN CLICK ==================== */
+const linkPortfolios = document.querySelectorAll(".portfolio__item");
+
+function activePortfolio() {
+    if (linkPortfolios) {
+        linkPortfolios.forEach((linkPortfolio) => {
+            linkPortfolio.classList.remove("active-portfolio");
+            this.classList.add("active-portfolio");
+        });
+    }
+}
+
+linkPortfolios.forEach((linkPortfolio) =>
+    linkPortfolio.addEventListener("click", activePortfolio)
+);
